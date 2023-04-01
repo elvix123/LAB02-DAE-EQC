@@ -1,0 +1,16 @@
+{% load mathfilters %}
+<h2>{{titulo}}</h2>
+<p>Resultado:</p>
+<p>La {{request.POST.operacion}} de {{num1}} y {{ num2}} = 
+
+
+{% if request.POST.operacion == 'suma' %}
+    {{num1|add:num2}}
+{% elif request.POST.operacion  == 'resta' %}
+    {{num1|sub:num2}}
+{% elif request.POST.operacion  == 'multiplicacion' %}
+    {{num1|mul:num2}}
+</p>
+
+{% endif %}
+
